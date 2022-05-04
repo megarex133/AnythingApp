@@ -5,6 +5,9 @@
       <map>
         <entry key="..\:/Anything/app/src/main/res/drawable/input_border.xml" value="0.2985" />
         <entry key="..\:/Anything/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.46924603174603174" />
+        <entry key="app/src/main/res/layout/activity_product_list.xml" value="0.61875" />
+        <entry key="app/src/main/res/layout/activity_recepeis.xml" value="0.61875" />
       </map>
     </option>
   </component>
