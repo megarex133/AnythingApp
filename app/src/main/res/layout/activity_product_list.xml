@@ -1,190 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ProductList_activity">
+    <!--Блок поиска-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:padding="3pt"
+        android:layout_marginBottom="50pt">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="7pt"
+            android:layout_marginEnd="2pt"
+            android:src="@drawable/ic_search">
+        </ImageView>
+        <EditText
+            android:id="@+id/searchText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:maxLength="200"/>
 
-    <TextView
-        android:id="@+id/textView32"
+    </LinearLayout>
+
+    <!--///////////////////////////////////////////////////-->
+
+    <!--Блок продуктов-->
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Apple"
-        android:textAlignment="center"
-        android:textColor="#4CAF50"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="197dp" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="1pt"
+        android:layout_marginBottom="45pt"
+       >
+        <!--Блок предложенных продуктов-->
+    <LinearLayout
+        android:layout_width="85pt"
+        android:layout_height="150pt"
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="android:"
-        android:text="Orange"
-        android:textAlignment="center"
-        android:textColor="#4CAF50"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="153dp" />
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/productsHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="Products:"
+            android:layout_marginBottom="3pt"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <ScrollView
+            android:layout_width="50pt"
+            android:layout_height="wrap_content">
+            <LinearLayout
+            android:layout_width="50pt"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:orientation="vertical"
+            ><TextView
+            android:id="@+id/product_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Orange"
+            android:layout_gravity="start"
+            android:layout_marginBottom="2pt"
+            android:textColor="#4CAF50"
+            android:textSize="18sp" />
+            <TextView
+                android:id="@+id/product_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apple"
+                android:layout_gravity="start"
+                android:layout_marginBottom="2pt"
+                android:textColor="#4CAF50"
+                android:textSize="18sp" />
+            </LinearLayout>
+        </ScrollView>
 
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Apple"
-        android:textAlignment="center"
-        android:textColor="#4CAF50"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="289dp" />
+    </LinearLayout>
+    <!--//////////////////////////////////////////////-->
 
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Apple"
-        android:textAlignment="center"
-        android:textColor="#4CAF50"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="245dp" />
+        <!--Блок выбранных продуктов-->
+    <LinearLayout
+        android:layout_width="85pt"
+        android:layout_height="150pt"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/pickedProductsHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginBottom="3pt"
+            android:text="Picked products:"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/product_1_picked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pie"
+                android:layout_gravity="start"
+                android:layout_marginBottom="2pt"
+                android:textColor="#4CAF50"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/product_2_picked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Orange"
+                android:layout_gravity="start"
+                android:layout_marginBottom="2pt"
+                android:textColor="#4CAF50"
+                android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Apple"
-        android:textAlignment="center"
-        android:textColor="#4CAF50"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="612dp" />
+            <TextView
+                android:id="@+id/product_3_picked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apple"
+                android:layout_gravity="start"
+                android:layout_marginBottom="2pt"
+                android:textColor="#4CAF50"
+                android:textSize="18sp" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Apple"
-        android:textAlignment="center"
-        android:textColor="#4CAF50"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="381dp" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Apple"
-        android:textAlignment="center"
-        android:textColor="#4CAF50"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="337dp" />
+    </LinearLayout>
+    <!--//////////////////////////////////////////////////////////-->
 
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Apple"
-        android:textAlignment="center"
-        android:textColor="#4CAF50"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="564dp" />
-
-    <TextView
-        android:id="@+id/textView28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Apple"
-        android:textAlignment="center"
-        android:textColor="#4CAF50"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="473dp" />
-
-    <TextView
-        android:id="@+id/textView29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Apple"
-        android:textAlignment="center"
-        android:textColor="#4CAF50"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="520dp" />
-
-    <TextView
-        android:id="@+id/textView30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Apple"
-        android:textAlignment="center"
-        android:textColor="#61AF4C"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="656dp" />
-
-    <TextView
-        android:id="@+id/textView31"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Apple"
-        android:textAlignment="center"
-        android:textColor="#4CAF50"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="429dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Picked products:"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="100dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Products:"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="100dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/findButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:backgroundTint="#F3AE30"
         android:padding="5dp"
         android:text="Find recepies"
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:cornerRadius="50px"
-        tools:layout_editor_absoluteX="170dp"
-        tools:layout_editor_absoluteY="715dp" />
+        app:cornerRadius="50px" />
 
-    <EditText
-        android:id="@+id/editTextTextMultiLine"
-        android:layout_width="170dp"
-        android:layout_height="551dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="145dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
