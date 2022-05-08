@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="products">
+        <item>Apple</item>
+        <item>Orange</item>
+        <item>apple sauce</item>
+        <item>Baked beans</item>
+    </string-array>
+</resources>
