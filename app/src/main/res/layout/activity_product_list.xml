@@ -48,73 +48,33 @@
     <!--Блок продуктов-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_height="180pt"
+        android:orientation="vertical"
         android:gravity="center"
+        android:textAlignment="center"
         android:layout_marginBottom="20pt"
        >
         <!--Блок предложенных продуктов-->
-    <LinearLayout
-        android:id="@+id/products"
-        android:layout_width="80pt"
-        android:layout_height="180pt"
-        android:orientation="vertical"
-        android:layout_marginStart="7pt"
-        android:layout_marginEnd="20pt">
+
 
         <TextView
             android:id="@+id/productsHead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:text="Product list:"
+            android:text="Product list (alphabetically):"
             android:layout_marginBottom="3pt"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <ListView
+            android:id="@+id/productList"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:entries="@array/products"
-            android:scrollbars="none"
-            android:textAlignment="textStart"
-            android:layout_gravity="start"
             android:divider="#ffffff"
-            android:choiceMode="multipleChoiceModal"
-            android:listSelector="#0E9459"></ListView>
+            android:textAlignment="center"
+            android:scrollbars="none"></ListView>
 
-    </LinearLayout>
-    <!--//////////////////////////////////////////////-->
-
-        <!--Блок выбранных продуктов-->
-    <LinearLayout
-        android:id="@+id/pickedProducts"
-        android:layout_width="wrap_content"
-        android:layout_height="180pt"
-        android:orientation="vertical"
-        android:layout_marginEnd="7pt">
-        <TextView
-            android:id="@+id/pickedProductsHead"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginBottom="3pt"
-            android:text="Picked product:"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            />
-       <ListView
-           android:layout_width="wrap_content"
-           android:layout_height="match_parent"
-           android:scrollbars="none"
-           android:divider="@color/white"
-           android:entries="@array/pickedProducts">
-
-       </ListView>
-
-    </LinearLayout>
 
     </LinearLayout>
     <!--//////////////////////////////////////////////////////////-->
