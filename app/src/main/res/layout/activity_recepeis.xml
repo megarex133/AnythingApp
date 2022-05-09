@@ -5,5 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Recepeis_activity">
+    <!--Блок поиска-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3pt"
+        android:layout_marginBottom="10pt">
+        <ImageView
+            android:id="@+id/searchIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="7pt"
+            android:layout_marginEnd="2pt"
+            android:src="@drawable/ic_search">
+        </ImageView>
+        <EditText
+            android:id="@+id/searchText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:maxLength="200"
+            android:visibility="invisible"/>
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="55pt"
+            android:layout_marginEnd="7pt"
+            android:src="@drawable/ic_search">
+        </ImageView>
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

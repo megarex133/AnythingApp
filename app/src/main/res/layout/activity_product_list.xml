@@ -49,37 +49,65 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="180pt"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:layout_marginBottom="20pt"
-       >
+        android:orientation="horizontal"
+        android:layout_marginBottom="20pt">
         <!--Блок предложенных продуктов-->
 
+<LinearLayout
+    android:layout_width="85pt"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
 
+    android:layout_marginStart="7pt">
         <TextView
             android:id="@+id/productsHead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Product list (alphabetically):"
+            android:text="Product list:"
             android:layout_marginBottom="3pt"
             android:textColor="#000000"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <ListView
             android:id="@+id/productList"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:divider="#ffffff"
-            android:textAlignment="center"
-            android:scrollbars="none"></ListView>
+            android:divider="@null"
+            android:scrollbars="none"
+            android:listSelector="@color/white"
+           ></ListView>
 
+</LinearLayout>
 
-    </LinearLayout>
     <!--//////////////////////////////////////////////////////////-->
+    <!--Блок выбранных продуктов-->
+        <LinearLayout
+            android:layout_width="85pt"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginEnd="7pt">
+    <TextView
+        android:id="@+id/productPickedHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Picked products:"
+        android:layout_marginBottom="3pt"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-
+    <ListView
+        android:id="@+id/productPickedList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:listSelector="@color/white"
+        ></ListView>
+        </LinearLayout>
+    </LinearLayout>
+    <!--/////////////////////////////////////-->
     <Button
         android:id="@+id/findButton"
         android:layout_width="wrap_content"

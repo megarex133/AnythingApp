@@ -3,7 +3,13 @@
     <string-array name="products">
         <item>Apple</item>
         <item>Orange</item>
-        <item>apple sauce</item>
+        <item>Apple sauce</item>
+        <item>Baked beans</item>
+        <item>Baked beans</item>
+        <item>Baked beans</item>
+        <item>Baked beans</item>
+        <item>Baked beans</item>
+        <item>Baked beans</item>
         <item>Baked beans</item>
     </string-array>
 </resources>
