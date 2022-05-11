@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="products">
-        <item>Apple</item>
-        <item>Orange</item>
-        <item>Apple sauce</item>
-        <item>Baked beans</item>
-        <item>Baked beans</item>
-        <item>Baked beans</item>
-        <item>Baked beans</item>
-        <item>Baked beans</item>
-        <item>Baked beans</item>
-        <item>Baked beans</item>
+        <item>Apples</item>
+        <item>Apples, dried</item>
+        <item>Apricot kernels</item>
+        <item>Apricots, dried</item>
+        <item>Avocados</item>
+        <item>Bananas</item>
+        <item>Barley</item>
+        <item>Beer</item>
+        <item>Blueberries</item>
+        <item>Butter</item>
+        <item>Carpets</item>
+        <item>Carrots</item>
+        <item>Cheese</item>
+        <item>Cherries</item>
+        <item>Chocolate</item>
+        <item>Cucumbers</item>
+        <item>Eggs</item>
+        <item>Garlic</item>
+        <item>Kiwifruit</item>
+        <item>Lemons</item>
+        <item>Mangos</item>
+        <item>Oats</item>
+        <item>Olive oil</item>
+        <item>Oranges</item>
+        <item>Rice</item>
+        <item>Tomatoes</item>
     </string-array>
 </resources>

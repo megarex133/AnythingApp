@@ -50,14 +50,16 @@ public class ProductList_activity extends AppCompatActivity {
                 String item = parent.getItemAtPosition(position).toString();
                 if(pickedProducts.indexOf(item)==-1) {
                     pickedProducts.add(item);
+                    Toast.makeText(getApplicationContext(),item + " added", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     pickedProducts.remove(item);
+                    Toast.makeText(getApplicationContext(),item + " removed", Toast.LENGTH_SHORT).show();
                 }
                 productPickedList.setAdapter(adapter1);
-                Toast.makeText(getApplicationContext(),"Clicked " + item, Toast.LENGTH_SHORT).show();
             }
         });
+        productPickedList.setAdapter(adapter1);
 
 
 
