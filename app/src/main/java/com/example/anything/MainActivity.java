@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         buttonLog.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(MainActivity.this, ProductList_activity.class));
+                startActivity(new Intent(MainActivity.this, ProductList_activity.class));
             URL url = null;
             try{
                 url = new URL("http://localhost:8080/giveMeText");

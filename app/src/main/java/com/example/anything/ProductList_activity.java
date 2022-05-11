@@ -16,6 +16,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 
 public class ProductList_activity extends AppCompatActivity {
 
@@ -23,8 +25,11 @@ public class ProductList_activity extends AppCompatActivity {
     EditText searchText;
 
     ListView productList;
+    ListView productPickedList;
 
     Button findButton;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +41,19 @@ public class ProductList_activity extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.products,R.layout.product);
         productList.setAdapter(adapter);
 
+        ArrayList<String> pickedProducts = new ArrayList<>();
+        productPickedList = (ListView) findViewById(R.id.productPickedList);
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<>(this, R.layout.product, pickedProducts);
         productList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String item = parent.getItemAtPosition(position).toString();
-                Toast.makeText(getApplicationContext(),"Clicked" + item, Toast.LENGTH_SHORT).show();
+                pickedProducts.add(item);
+                productPickedList.setAdapter(adapter1);
+                Toast.makeText(getApplicationContext(),"Clicked " + item, Toast.LENGTH_SHORT).show();
             }
         });
+
 
 
         searchIcon = (ImageView) findViewById(R.id.searchIcon);
@@ -61,7 +72,9 @@ public class ProductList_activity extends AppCompatActivity {
         findButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ProductList_activity.this,Recepeis_activity.class));
+
+
+           startActivity(new Intent(ProductList_activity.this,Recepeis_activity.class));
             }
         });
 
