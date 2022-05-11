@@ -48,7 +48,12 @@ public class ProductList_activity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String item = parent.getItemAtPosition(position).toString();
-                pickedProducts.add(item);
+                if(pickedProducts.indexOf(item)==-1) {
+                    pickedProducts.add(item);
+                }
+                else{
+                    pickedProducts.remove(item);
+                }
                 productPickedList.setAdapter(adapter1);
                 Toast.makeText(getApplicationContext(),"Clicked " + item, Toast.LENGTH_SHORT).show();
             }
