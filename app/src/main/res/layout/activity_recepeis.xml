@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Recepeis_activity">
+    tools:context=".Recepeis_activity"
+    android:orientation="vertical">
     <!--Блок поиска-->
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -15,8 +16,7 @@
         android:padding="3pt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="20pt">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/searchIcon"
@@ -51,8 +51,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recipes"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="none"/>
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        />
 
 
 </LinearLayout>
