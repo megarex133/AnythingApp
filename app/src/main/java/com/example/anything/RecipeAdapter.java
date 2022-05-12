@@ -1,6 +1,7 @@
 package com.example.anything;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,8 +36,21 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull RecipeViewHolder holder, int position) {
 
+        // Превью рецепта
         holder.imageView.setImageResource(recipesList.get(position).getItemImage());
         holder.mTitle.setText(recipesList.get(position).getItemName());
+
+        // Детальный рецепт
+        holder.mCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext,DetailActivityRecipe.class);
+                intent.putExtra("Title",recipesList.get(holder.getAdapterPosition()).getItemName());
+                intent.putExtra("Ingredients",recipesList.get(holder.getAdapterPosition()).getItemIngredients());
+                intent.putExtra("Description",recipesList.get(holder.getAdapterPosition()).getItemDescription());
+                mContext.startActivity(intent);
+            }
+        });
 
     }
 
@@ -47,6 +61,8 @@ class RecipeViewHolder extends RecyclerView.ViewHolder {
 
     ImageView imageView;
     TextView mTitle;
+    TextView mIngredients;
+    TextView mDescription;
     CardView mCardView;
 
     public RecipeViewHolder(View itemView) {
@@ -54,6 +70,8 @@ class RecipeViewHolder extends RecyclerView.ViewHolder {
 
         imageView = itemView.findViewById(R.id.recipe_item_image);
         mTitle = itemView.findViewById(R.id.recipe_item_title);
+        mIngredients = itemView.findViewById(R.id.recipe_detail_ingredients);
+        mDescription = itemView.findViewById(R.id.recipe_detail_ingredients);
 
         mCardView = itemView.findViewById(R.id.recipe_item);
 
