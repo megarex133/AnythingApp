@@ -28,7 +28,7 @@ public class ProductList_activity extends AppCompatActivity {
     ListView productPickedList;
 
     Button findButton;
-
+    ArrayList<String> pickedProducts = new ArrayList<>();
 
 
     @Override
@@ -41,7 +41,7 @@ public class ProductList_activity extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.products,R.layout.product);
         productList.setAdapter(adapter);
 
-        ArrayList<String> pickedProducts = new ArrayList<>();
+
         productPickedList = (ListView) findViewById(R.id.productPickedList);
         ArrayAdapter<String> adapter1 = new ArrayAdapter<>(this, R.layout.product, pickedProducts);
         productList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -79,9 +79,8 @@ public class ProductList_activity extends AppCompatActivity {
         findButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-           startActivity(new Intent(ProductList_activity.this,Recepeis_activity.class));
+                if (pickedProducts.isEmpty() != true)  startActivity(new Intent(ProductList_activity.this,Recepeis_activity.class));
+                else Toast.makeText(getApplicationContext(),"Add at least 1 product", Toast.LENGTH_SHORT).show();
             }
         });
 
