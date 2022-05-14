@@ -30,7 +30,7 @@ public class ProductList_activity extends AppCompatActivity {
     ListView productPickedList;
 
     Button findButton;
-    ArrayList<String> pickedProducts = new ArrayList<>();
+    ArrayList<String> pickedProducts;
 
 
     @Override
@@ -38,6 +38,13 @@ public class ProductList_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_list);
 
+
+        ArrayList<String> initList = (ArrayList<String>)getIntent().getSerializableExtra("pickedProductsNew");
+        if(initList==null || initList.size()==0){
+            pickedProducts = new ArrayList<String>();
+        } else {
+            pickedProducts = initList;
+        }
         productList = (ListView) findViewById(R.id.productList);
         productList.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.products,R.layout.product);

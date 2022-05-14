@@ -58,7 +58,6 @@ public class Recepeis_activity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(gridLayoutManager);
         mRecyclerView.setAdapter(recipeAdapter);
 
-        
         ArrayList<String> pickedProducts = (ArrayList<String>)getIntent().getSerializableExtra("pickedProducts");
         String productsStr = "";
         for(int i = 0; i < pickedProducts.size(); i++)
@@ -69,7 +68,6 @@ public class Recepeis_activity extends AppCompatActivity {
             productsStr += pickedProducts.get(i);
             }
         }
-        if(recipesList.isEmpty()==true) Toast.makeText(getApplicationContext(),"No recipes found",Toast.LENGTH_LONG).show();
 
         sendReq(productsStr);
 
@@ -91,7 +89,9 @@ public class Recepeis_activity extends AppCompatActivity {
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Recepeis_activity.this,ProductList_activity.class));
+                Intent intent = new Intent(Recepeis_activity.this,ProductList_activity.class);
+                intent.putExtra("pickedProductsNew",pickedProducts);
+                startActivity(intent);
             }
         });
 
@@ -109,26 +109,19 @@ public class Recepeis_activity extends AppCompatActivity {
                 loadingProgressBar.setVisibility(View.GONE);
 
                 try {
-
-//                    JSONObject responseInstance= response.getJSONObject("responseInstance");
                     JSONArray recipes = response.getJSONArray("recipes");
-                    System.out.println(recipes.toString());
-
-
                     for(int i = 0; i < recipes.length(); i++){
                         JSONObject recipe = recipes.getJSONObject(i);
-                        String name = recipe.getString("name");
-                        String description = recipe.getString("description");
-                        String url = recipe.getString("url");
-                        recipesList.add(new RecipesData(name,"Eggs,salt",description,url));
+                        String name = recipe.getJSONObject("recipeEntity").getString("name");
+                        String ingredients = recipe.getString("products");
+                        String instruction = recipe.getString("script");
+                        String url = recipe.getJSONObject("recipeEntity").getString("url");
+                        recipesList.add(new RecipesData(name,ingredients,instruction,url));
                     }
-
-
+                    if(recipesList.isEmpty()==true) Toast.makeText(getApplicationContext(),"No recipes found",Toast.LENGTH_LONG).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }recipeAdapter.notifyDataSetChanged();
-
-
             }
         }, new Response.ErrorListener() {
             @Override
