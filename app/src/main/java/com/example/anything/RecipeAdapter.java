@@ -12,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeViewHolder>{
@@ -36,9 +38,11 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull RecipeViewHolder holder, int position) {
 
+        RecipesData list = recipesList.get(position);
         // Превью рецепта
-        holder.imageView.setImageResource(recipesList.get(position).getItemImage());
-        holder.mTitle.setText(recipesList.get(position).getItemName());
+        Picasso.get().load(list.getItemImage()).into(holder.imageView);
+//        holder.imageView.setImageResource(recipesList.get(position).getItemImage());
+        holder.mTitle.setText(list.getItemName());
 
         // Детальный рецепт
         holder.mCardView.setOnClickListener(new View.OnClickListener() {

@@ -16,6 +16,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+
 import java.util.ArrayList;
 
 
@@ -63,23 +65,28 @@ public class ProductList_activity extends AppCompatActivity {
 
 
 
-        searchIcon = (ImageView) findViewById(R.id.searchIcon);
-        searchText = (EditText) findViewById(R.id.searchText);
-
-
-        searchIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                searchText.setVisibility(View.VISIBLE);
-            }
-        });
+//        searchIcon = (ImageView) findViewById(R.id.searchIcon);
+//        searchText = (EditText) findViewById(R.id.searchText);
+//
+//
+//        searchIcon.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                searchText.setVisibility(View.VISIBLE);
+//            }
+//        });
 
         findButton = (Button) findViewById(R.id.findButton);
 
         findButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (pickedProducts.isEmpty() != true)  startActivity(new Intent(ProductList_activity.this,Recepeis_activity.class));
+                if (pickedProducts.isEmpty() != true)  {
+                    // Отправка продуктов на следующий экран
+                   Intent intent = new Intent(ProductList_activity.this,Recepeis_activity.class);
+                   intent.putExtra("pickedProducts",pickedProducts);
+                   startActivity(intent);
+                }
                 else Toast.makeText(getApplicationContext(),"Add at least 1 product", Toast.LENGTH_SHORT).show();
             }
         });

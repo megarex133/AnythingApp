@@ -6,37 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".Recepeis_activity"
     android:orientation="vertical">
-    <!--Блок поиска-->
+    <!--Блок шапки-->
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="start"
+        android:gravity="end"
         android:orientation="horizontal"
         android:padding="3pt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/searchIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginStart="7pt"
-            android:layout_marginEnd="2pt"
-            android:contentDescription="Search products"
-            android:src="@drawable/ic_search"></ImageView>
+<!--        <ImageView-->
+<!--            android:id="@+id/searchIcon"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="start"-->
+<!--            android:layout_marginStart="7pt"-->
+<!--            android:layout_marginEnd="2pt"-->
+<!--            android:contentDescription="Search products"-->
+<!--            android:src="@drawable/ic_search"></ImageView>-->
 
-        <EditText
-            android:id="@+id/searchText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="text"
-            android:maxLength="200"
-            android:visibility="invisible"
-            android:layout_marginEnd="12pt"/>
+<!--        <EditText-->
+<!--            android:id="@+id/searchText"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="text"-->
+<!--            android:maxLength="200"-->
+<!--            android:visibility="invisible"-->
+<!--            android:layout_marginEnd="12pt"/>-->
 
         <ImageView
             android:id="@+id/profile"
@@ -47,7 +47,12 @@
             android:src="@drawable/ic_baseline_kitchen_24"></ImageView>
 
     </LinearLayout>
-
+    <ProgressBar
+        android:id="@+id/idPBLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recipes"
         android:layout_width="match_parent"

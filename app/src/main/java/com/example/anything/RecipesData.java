@@ -7,9 +7,9 @@ public class RecipesData {
     private String itemName;
     private String itemIngredients;
     private String itemDescription;
-    private int itemImage;
+    private String itemImage;
 
-    public RecipesData(String itemName, String itemIngredients, String itemDescription, int itemImage) {
+    public RecipesData(String itemName, String itemIngredients, String itemDescription, String itemImage) {
         this.itemName = itemName;
         this.itemIngredients = itemIngredients;
         this.itemDescription = itemDescription;
@@ -28,7 +28,7 @@ public class RecipesData {
         return itemDescription;
     }
 
-    public int getItemImage() {
+    public String getItemImage() {
         return itemImage;
     }
 
@@ -44,7 +44,7 @@ public class RecipesData {
         this.itemDescription = itemDescription;
     }
 
-    public void setItemImage(int itemImage) {
+    public void setItemImage(String itemImage) {
         this.itemImage = itemImage;
     }
 }

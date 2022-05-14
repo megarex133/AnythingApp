@@ -2,9 +2,9 @@
 <resources>
     <string-array name="products">
         <item>Apples</item>
-        <item>Apples, dried</item>
+        <item>Apples dried</item>
         <item>Apricot kernels</item>
-        <item>Apricots, dried</item>
+        <item>Apricots dried</item>
         <item>Avocados</item>
         <item>Bananas</item>
         <item>Barley</item>
@@ -17,7 +17,7 @@
         <item>Cherries</item>
         <item>Chocolate</item>
         <item>Cucumbers</item>
-        <item>Eggs</item>
+        <item>Egg</item>
         <item>Garlic</item>
         <item>Kiwifruit</item>
         <item>Lemons</item>
