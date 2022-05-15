@@ -1,31 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="products">
-        <item>Apples</item>
-        <item>Apples dried</item>
-        <item>Apricot kernels</item>
-        <item>Apricots dried</item>
-        <item>Avocados</item>
+        <item>Apple</item>
+        <item>Apricot</item>
+        <item>Avocado</item>
         <item>Bananas</item>
+        <item>Bacon</item>
         <item>Barley</item>
+        <item>Beef</item>
         <item>Beer</item>
-        <item>Blueberries</item>
+        <item>Blueberry</item>
         <item>Butter</item>
-        <item>Carpets</item>
-        <item>Carrots</item>
+        <item>Buttermilk</item>
+        <item>Carpet</item>
+        <item>Carrot</item>
+        <item>Canola oil</item>
+        <item>Cauliflower</item>
         <item>Cheese</item>
-        <item>Cherries</item>
+        <item>Cheddar cheese</item>
+        <item>Cherry</item>
+        <item>Chicken</item>
         <item>Chocolate</item>
-        <item>Cucumbers</item>
+        <item>Cottage cheese</item>
+        <item>Corn</item>
+        <item>Cornmeal</item>
+        <item>Cracker</item>
+        <item>Cucumber</item>
         <item>Egg</item>
+        <item>Flour</item>
         <item>Garlic</item>
+        <item>Gelatin</item>
+        <item>Gravy</item>
         <item>Kiwifruit</item>
-        <item>Lemons</item>
-        <item>Mangos</item>
-        <item>Oats</item>
+        <item>Ketchup</item>
+        <item>Lemon</item>
+        <item>Mango</item>
+        <item>Milk</item>
+        <item>Mozarella cheese</item>
+        <item>Mustard</item>
+        <item>Mushroom</item>
+        <item>Oat</item>
         <item>Olive oil</item>
-        <item>Oranges</item>
+        <item>Orange</item>
         <item>Rice</item>
-        <item>Tomatoes</item>
+        <item>Red pepper</item>
+        <item>Salad</item>
+        <item>Salt</item>
+        <item>Swiss cheese</item>
+        <item>Soda</item>
+        <item>Sugar</item>
+        <item>Parmesan cheese</item>
+        <item>Parsley</item>
+        <item>Pepper</item>
+        <item>Pepper sauce</item>
+        <item>Pie</item>
+        <item>Potato</item>
+        <item>Powder</item>
+        <item>Tomato</item>
+        <item>Tomato sauce</item>
+        <item>Topping</item>
+        <item>Thyme</item>
+        <item>Vanilla</item>
+        <item>Yogurt</item>
+        <item>Zucchini</item>
+        <item>Water</item>
+        <item>Walnut</item>
     </string-array>
 </resources>
